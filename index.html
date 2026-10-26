@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>음식과 요리 요약본</title>
+<meta name="description" content="해럴드 맥기 『음식과 요리』를 블로그 연재와 서평으로 쉽게 풀어 쓴 요약본">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf6ef;
+  --surface: #ffffff;
+  --ink: #2a2420;
+  --muted: #6f6359;
+  --line: #e7ddd0;
+  --accent: #b5532a;
+  --accent-soft: #f6e4d8;
+  --tip: #2f6b4f;
+  --tip-soft: #e3f0e8;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1c1916;
+    --surface: #26221e;
+    --ink: #eee6dc;
+    --muted: #b0a396;
+    --line: #3a332d;
+    --accent: #e98a5c;
+    --accent-soft: #3a2a21;
+    --tip: #7fc4a0;
+    --tip-soft: #1f3129;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1c1916;
+  --surface: #26221e;
+  --ink: #eee6dc;
+  --muted: #b0a396;
+  --line: #3a332d;
+  --accent: #e98a5c;
+  --accent-soft: #3a2a21;
+  --tip: #7fc4a0;
+  --tip-soft: #1f3129;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.75 "Noto Sans KR", system-ui, sans-serif;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+a { color: var(--accent); }
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+header { padding: 56px 0 24px; }
+.eyebrow { color: var(--accent); font-weight: 700; font-size: 14px; letter-spacing: .04em; }
+h1, h2, h3 { font-family: "Gowun Batang", serif; line-height: 1.35; }
+h1 { font-size: clamp(30px, 6vw, 44px); margin: 8px 0 12px; }
+h2 { font-size: 26px; margin: 56px 0 8px; padding-top: 8px; border-top: 1px solid var(--line); }
+h3 { font-size: 20px; margin: 0 0 4px; }
+.lead { font-size: 18px; color: var(--muted); margin: 0; }
+.meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.chip { background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; font-size: 14px; color: var(--muted); }
+nav.toc { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px 20px; margin: 24px 0 0; }
+nav.toc ol { margin: 6px 0 0; padding-left: 20px; }
+nav.toc a { text-decoration: none; }
+.section-note { color: var(--muted); margin: 0 0 20px; }
+.big-idea { background: var(--accent-soft); border-radius: 14px; padding: 20px 22px; margin: 16px 0; }
+.big-idea p { margin: 0; }
+.grid { display: grid; gap: 16px; }
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 20px 22px;
+}
+.card .tag { font-size: 13px; color: var(--muted); }
+.card .one { font-weight: 700; margin: 8px 0; }
+.card p { margin: 8px 0; }
+.tip { background: var(--tip-soft); color: var(--ink); border-radius: 10px; padding: 10px 14px; margin-top: 12px; font-size: 15px; }
+.tip b { color: var(--tip); }
+.src { font-size: 14px; margin-top: 12px; color: var(--muted); }
+table { width: 100%; border-collapse: collapse; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; font-size: 15px; }
+th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { background: var(--accent-soft); font-weight: 700; }
+tr:last-child td { border-bottom: 0; }
+.table-wrap { overflow-x: auto; }
+.two { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; }
+ul.clean { margin: 8px 0; padding-left: 20px; }
+footer { margin: 64px 0 40px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+@media (max-width: 640px) {
+  .two { grid-template-columns: 1fr; }
+  h2 { font-size: 23px; }
+  .card { padding: 18px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">연재 · 서평 요약본</div>
+  <h1>『음식과 요리』를<br>1260쪽 대신 10분에</h1>
+  <p class="lead">해럴드 맥기의 요리 과학 책을, 블로그 연재와 서평을 바탕으로 아주 쉽게 풀어 썼다.</p>
+  <div class="meta">
+    <span class="chip">해럴드 맥기 지음</span>
+    <span class="chip">원제 On Food and Cooking</span>
+    <span class="chip">이데아, 2017</span>
+    <span class="chip">1260쪽</span>
+  </div>
+  <nav class="toc" aria-label="목차">
+    <strong>목차</strong>
+    <ol>
+      <li><a href="#book">이 책은 어떤 책인가</a></li>
+      <li><a href="#topics">주제별 쉬운 설명 (연재 10편)</a></li>
+      <li><a href="#reviews">서평이 말하는 것</a></li>
+      <li><a href="#more">더 볼 자료</a></li>
+    </ol>
+  </nav>
+</header>
+
+<main>
+
+<section id="book">
+  <h2>1. 이 책은 어떤 책인가</h2>
+  <div class="big-idea">
+    <p><b>한 줄로:</b> "왜 이렇게 하면 맛있어질까?"에 과학으로 답하는 부엌 백과사전이다. 레시피는 거의 없다.</p>
+  </div>
+  <p>요리책은 보통 "이렇게 하세요"를 알려 준다. 이 책은 "이렇게 하면 재료 안에서 이런 일이 생긴다"를 알려 준다. 예를 들어 고기를 구우면 왜 갈색이 되고 맛있는 냄새가 나는지, 분자 수준에서 설명한다. 그리고 그 음식이 어디서 왔는지, 사람들이 어떻게 먹어 왔는지도 함께 말한다.</p>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>부분</th><th>다루는 것</th></tr></thead>
+    <tbody>
+      <tr><td>1~4장</td><td>젖과 유제품, 알, 고기, 생선과 조개</td></tr>
+      <tr><td>5~8장</td><td>채소, 과일, 허브와 향신료, 차와 커피</td></tr>
+      <tr><td>9~10장</td><td>곡물, 콩, 견과, 그리고 빵 · 케이크 · 파스타</td></tr>
+      <tr><td>11~13장</td><td>소스, 설탕과 초콜릿, 와인 · 맥주 · 증류주</td></tr>
+      <tr><td>14~15장</td><td>조리 방법과 도구, 음식을 이루는 네 가지 기본 분자</td></tr>
+      <tr><td>부록</td><td>원자, 분자, 에너지 같은 화학 기초</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="section-note" style="margin-top:12px">서평을 쓴 사람들은 모두 같은 방법을 권한다. 처음부터 끝까지 읽지 않는다. 궁금한 것이 생기면 찾아보기(색인)에서 찾아 그 부분만 읽는다.</p>
+</section>
+
+<section id="topics">
+  <h2>2. 주제별 쉬운 설명</h2>
+  <p class="section-note">네이버 블로그 tasmanic의 연재 10편을 바탕으로 썼다. 쪽수는 2011년 백년후 판 기준이라 지금 판과 다를 수 있다.</p>
+
+  <div class="grid">
+
+  <article class="card" id="milk">
+    <div class="tag">1장 · 우유와 유제품, 버터와 치즈 · p.29~115</div>
+    <h3>우유는 작은 공들이 떠다니는 물이다</h3>
+    <p class="one">우유 속 단백질 공(카제인)이 서로 뭉치면 치즈와 요구르트가 된다.</p>
+    <p>우유 속에는 아주 작은 단백질 공이 떠다닌다. 공의 겉에는 "가까이 오지 마" 하고 서로 밀어내는 털이 있다. 그래서 평소에는 뭉치지 않는다. 신맛(산)을 넣으면 이 털이 힘을 잃는다. 그러면 공끼리 달라붙어 덩어리가 된다. 이것이 요구르트다. 송아지 위에서 나오는 효소(레닛)는 털을 아예 잘라 낸다. 이렇게 뭉친 덩어리에서 물을 빼고 숙성하면 치즈가 된다.</p>
+    <p>우유의 지방은 작은 방울로 떠 있다. 가만히 두면 위로 떠올라 크림이 된다. 크림을 세게 저으면 지방 방울이 깨져 서로 붙는다. 이것이 버터다. 시중 우유는 높은 압력으로 지방 방울을 잘게 부순다(균질화). 그래서 크림이 뜨지 않는다.</p>
+    <p>우유 단백질은 달걀과 달리 끓여도 굳지 않는다. 산을 만나야 굳는다.</p>
+    <div class="tip"><b>부엌에서:</b> 우유를 데우다 몽글몽글해지면, 열이 아니라 산(오래된 우유, 레몬, 토마토)이 원인일 가능성이 높다.</div>
+    <div class="src">원문: <a href="https://m.blog.naver.com/tasmanic/221370365806">우유와 유제품, 버터와 치즈</a></div>
+  </article>
+
+  <article class="card" id="meat">
+    <div class="tag">3장 · 근섬유의 유형과 고기 색깔 · p.215~218</div>
+    <h3>닭가슴살은 단거리 선수, 닭다리는 마라톤 선수</h3>
+    <p class="one">자주, 오래 쓰는 근육일수록 붉고 맛이 진하다.</p>
+    <p>근육에는 두 종류가 있다. 흰 근육은 짧고 세게 힘을 쓴다. 닭이 퍼드덕 날아오를 때 쓰는 가슴살이 그렇다. 붉은 근육은 오래 천천히 일한다. 하루 종일 몸을 받치는 다리가 그렇다.</p>
+    <p>오래 일하려면 산소가 많이 필요하다. 붉은 근육에는 산소를 붙잡아 두는 단백질(미오글로빈)이 많다. 이 단백질이 고기를 붉게 만든다. 몇백 킬로미터를 나는 오리의 가슴살이 붉은 이유도 이것이다.</p>
+    <p>미오글로빈은 상태에 따라 색이 바뀐다. 산소가 붙으면 밝은 빨강, 산소가 떨어지면 짙은 자주, 오래되어 변하면 갈색이 된다. 붉은 근육은 지방과 여러 물질이 더 많아서 맛도 더 진하다.</p>
+    <div class="tip"><b>부엌에서:</b> 진공 포장 고기가 자줏빛이어도 상한 것이 아니다. 공기에 잠깐 두면 다시 빨개진다.</div>
+    <div class="src">원문: <a href="https://m.blog.naver.com/tasmanic/220300888807">근섬유의 유형과 고기 색깔</a></div>
+  </article>
+
+  <article class="card" id="toxins">
+    <div class="tag">식물이 스스로를 보호하는 독소 · p.410~412</div>
+    <h3>식물은 도망가지 못해서 독을 만든다</h3>
+    <p class="one">채소에도 "나 먹지 마" 하는 물질이 조금씩 남아 있다. 조리법으로 대부분 피한다.</p>
+    <p>식물은 동물에게 먹히지 않으려고 화학 물질을 만든다. 사람은 오랫동안 품종을 고르면서 이 물질을 줄여 왔다. 그래도 몇 가지는 아직 조심해야 한다.</p>
+    <ul class="clean">
+      <li><b>쓴맛 물질(알칼로이드):</b> 초록색으로 변한 감자와 감자 싹에 많다.</li>
+      <li><b>청산 계열 물질:</b> 죽순, 복숭아와 자두 씨에 있다. 뚜껑을 열고 삶거나, 물에 우리거나, 발효해서 없앤다.</li>
+      <li><b>소화 방해 단백질(렉틴 등):</b> 콩에 있다. 오래 끓이면 힘을 잃는다.</li>
+      <li><b>옥살산:</b> 시금치에 많다. 칼슘과 만나면 돌처럼 굳어 신장결석의 원인이 될 수 있다.</li>
+      <li><b>일부 버섯의 독:</b> 익혀도 다 없어지지 않는다고 적혀 있다.</li>
+    </ul>
+    <div class="tip"><b>부엌에서:</b> 감자의 초록 부분과 싹은 넉넉히 도려낸다. 강낭콩 같은 마른 콩은 덜 익히지 말고 충분히 끓인다.</div>
+    <div class="src">원문: <a href="https://m.blog.naver.com/tasmanic/220361472345">식물들이 스스로 보호하기 위해 준비하는 독소들</a></div>
+  </article>
+
+  <article class="card" id="olive">
+    <div class="tag">올리브, 올리브유 · p.527~529</div>
+    <h3>올리브유는 과일 주스 같은 기름이다</h3>
+    <p class="one">씨가 아니라 열매 전체를 으깨서 짠다. 그래서 신선할수록 좋다.</p>
+    <p>대부분의 식용유는 마른 씨앗에서 짠다. 올리브유는 다르다. 과육과 씨를 통째로 으깨서 짠다. 과육의 최대 30%가 기름이기 때문이다.</p>
+    <p>처음 눌러 짠 가장 좋은 기름이 엑스트라 버진이다. 등급은 맛과 "떨어져 나온 지방산"의 양으로 정한다. 이 양이 많으면 기름이 상하기 시작했다는 뜻이다. 유럽 기준으로 엑스트라 버진은 0.8% 이하, 버진은 2% 이하다.</p>
+    <p>좋은 올리브유가 초록빛인 것은 엽록소 때문이다. 엽록소는 빛을 받으면 기름 냄새를 나쁘게 만든다.</p>
+    <div class="tip"><b>부엌에서:</b> 올리브유는 빛이 안 드는 병이나 캔에 담아 서늘한 곳에 둔다. 가스레인지 옆 투명한 병은 피한다.</div>
+    <div class="src">원문: <a href="https://m.blog.naver.com/tasmanic/220300834629">올리브, 올리브유</a></div>
+  </article>
+
+  <article class="card" id="corn-beans">
+    <div class="tag">9장 · 옥수수와 콩의 전처리 · p.731~745</div>
+    <h3>옥수수와 콩은 "준비 운동"이 필요하다</h3>
+    <p class="one">옥수수는 알칼리 물에 삶아야 영양이 풀리고, 콩은 오래 익히거나 발효해야 속이 편하다.</p>
+    <p><b>옥수수:</b> 멕시코 원주민은 재나 석회를 푼 물에 옥수수를 삶았다. 그러면 껍질이 잘 벗겨지고, 갇혀 있던 비타민 B3(나이아신)가 몸에 흡수되기 쉬워진다. 유럽은 옥수수만 가져가고 이 방법은 가져가지 않았다. 그래서 옥수수를 주식으로 먹던 사람들이 비타민 B3 부족으로 피부병(펠라그라)에 걸렸다.</p>
+    <p><b>콩:</b> 콩에는 사람이 소화하지 못하는 당이 있다. 이 당이 장까지 가면 장 속 세균이 먹고 가스를 만든다. 그래서 콩을 먹으면 배가 더부룩하다. 오래 익히거나, 싹을 틔우거나, 된장처럼 발효하면 이 당이 줄어든다.</p>
+    <div class="tip"><b>부엌에서:</b> 콩 요리 뒤에 속이 불편하면, 더 오래 익히거나 된장 · 낫토 같은 발효 콩을 먹는다.</div>
+    <div class="src">원문: <a href="https://m.blog.naver.com/tasmanic/220361458249">옥수수와 콩의 전처리</a></div>
+  </article>
+
+  <article class="card" id="bread">
+    <div class="tag">10장 · 빵과 글루텐 · p.795~814</div>
+    <h3>밀가루 반죽은 고무줄 그물이다</h3>
+    <p class="one">치대면 글루텐이라는 고무줄 그물이 생기고, 그 그물이 공기를 가둬 빵이 부푼다.</p>
+    <p>다른 곡물 가루는 물과 섞어도 그냥 죽이 된다. 밀가루는 물과 섞어 치대면 쫄깃하게 늘어난다. 밀 단백질 두 가지가 만나 글루텐이 되기 때문이다. 치댈수록 단백질 사슬이 길게 이어져 튼튼한 그물이 된다.</p>
+    <p>빵 속 구멍은 효모가 새로 만드는 것이 아니다. 치댈 때 생긴 작은 공기방울에 효모가 만든 가스가 들어가 커지는 것이다. 그래서 빵의 질감은 반죽을 치댈 때부터 정해진다. 구울 때는 밀가루의 70%를 차지하는 전분이 굳어서, 부푼 모양을 단단하게 붙잡는다.</p>
+    <p>통밀가루에는 껍질과 씨눈이 들어 있다. 맛과 영양은 좋지만 글루텐 그물을 방해한다. 그래서 통밀빵은 묵직하고 빽빽하다.</p>
+    <div class="tip"><b>부엌에서:</b> 쫄깃한 빵은 오래 치대고, 바삭한 쿠키나 케이크는 살살 섞는다. 글루텐을 키울지 말지의 차이다.</div>
+    <div class="src">원문: <a href="https://m.blog.naver.com/tasmanic/220362506243">빵 - 밀가루의 글루텐 탄성</a></div>
+  </article>
+
+  <article class="card" id="wine">
+    <div class="tag">13장 · 술① 와인 · p.1086~1104</div>
+    <h3>와인은 효모가 포도 설탕을 먹고 남긴 것이다</h3>
+    <p class="one">포도의 당을 효모가 알코올로 바꾸고, 시간과 오크통이 맛을 둥글게 만든다.</p>
+    <ol class="clean">
+      <li><b>포도:</b> 햇볕, 비, 땅에 따라 당과 신맛이 달라진다. 그해 날씨 차이가 빈티지, 땅과 기후 차이가 테루아다.</li>
+      <li><b>으깨기:</b> 화이트 와인은 껍질을 금방 뺀다. 레드 와인은 껍질과 함께 발효해서 색과 떫은맛을 얻는다.</li>
+      <li><b>1차 발효:</b> 화이트는 차갑게 오래, 레드는 따뜻하게 짧게. 당이 다 없어지면 드라이, 당이 남으면 스위트 와인이 된다.</li>
+      <li><b>2차 발효:</b> 세균이 날카로운 신맛(사과산)을 부드러운 신맛(젖산)으로 바꾼다.</li>
+      <li><b>숙성:</b> 오크통 속에서 산소와 천천히 만나 단순한 과일 맛이 깊은 맛이 된다.</li>
+    </ol>
+    <p>샴페인 같은 스파클링 와인은 다 만든 와인에 효모와 설탕을 더 넣고 병을 막아, 병 안에서 한 번 더 발효한 것이다. 그때 생긴 가스가 거품이다.</p>
+    <div class="src">원문: <a href="https://m.blog.naver.com/tasmanic/220493974758">술① 와인 만드는 과정</a></div>
+  </article>
+
+  <article class="card" id="beer">
+    <div class="tag">13장 · 술② 맥주 · p.1110~1129</div>
+    <h3>맥주는 보리를 싹 틔워서 시작한다</h3>
+    <p class="one">효모는 전분을 못 먹는다. 그래서 보리 싹의 효소로 전분을 설탕으로 바꾼 뒤 발효한다.</p>
+    <p>포도에는 처음부터 당이 있다. 보리에는 전분만 있다. 그래서 보리를 싹 틔운다(맥아). 싹이 나면서 전분을 당으로 바꾸는 효소가 생긴다. 이것을 말리고 굽는다. 세게 구울수록 색과 맛이 진해진다.</p>
+    <p>맥아를 뜨거운 물에 풀면 단 물(맥아즙)이 나온다. 여기에 홉을 넣고 끓인다. 홉은 쓴맛과 향을 준다. 마지막으로 효모를 넣어 발효한다.</p>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th></th><th>에일</th><th>라거</th></tr></thead>
+      <tbody>
+        <tr><td>온도</td><td>따뜻하게 (18~25도)</td><td>차갑게 (6~10도)</td></tr>
+        <tr><td>효모 위치</td><td>위에 뜬다</td><td>바닥에 가라앉는다</td></tr>
+        <tr><td>맛</td><td>과일 향, 강한 맛</td><td>순하고 깔끔한 맛</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="src">원문: <a href="https://m.blog.naver.com/tasmanic/220498174762">술② 맥주 만드는 과정</a></div>
+  </article>
+
+  <article class="card" id="sake">
+    <div class="tag">13장 · 술③ 미주와 사케 · p.1129~1135</div>
+    <h3>사케는 곰팡이와 효모의 이인삼각이다</h3>
+    <p class="one">곰팡이가 쌀 전분을 당으로 바꾸고, 바로 옆에서 효모가 그 당을 술로 바꾼다.</p>
+    <p>맥주는 곡물의 효소를 쓴다. 쌀 술은 곰팡이(누룩, 코지)의 효소를 쓴다. 그리고 맥주는 액체만 걸러 발효하지만, 쌀 술은 걸쭉한 쌀죽 전체를 발효한다. 곰팡이와 효모가 한 통에서 동시에 일한다.</p>
+    <p>중국식 쌀 술은 여러 곰팡이와 효모가 함께 자란 누룩을 쓰고, 따뜻하게 짧게 발효한다. 일본 사케는 곰팡이 한 종류만 키운 코지에 효모를 따로 넣고, 차갑게 오래 발효한다. 좋은 사케일수록 쌀을 많이 깎는다. 쌀 가운데는 전분이 많고 단백질과 기름이 적어서, 맛이 더 깔끔해진다.</p>
+    <div class="src">원문: <a href="https://m.blog.naver.com/tasmanic/220498211454">술③ 쌀로 만든 미주, 사케</a></div>
+  </article>
+
+  <article class="card" id="browning">
+    <div class="tag">캐러멜화와 메일라드 반응 · p.1165~1169</div>
+    <h3>갈색 = 맛있는 냄새</h3>
+    <p class="one">뜨거운 불에서 음식 겉이 갈색이 될 때, 수백 가지 새 향이 생긴다.</p>
+    <p><b>캐러멜화:</b> 설탕만 뜨겁게 가열할 때 생긴다. 녹은 설탕이 노랗게, 그다음 갈색이 되면서 달고 고소한 향이 난다. 달고나가 그렇다.</p>
+    <p><b>메일라드 반응:</b> 당과 단백질 조각(아미노산)이 함께 뜨거워질 때 생긴다. 구운 고기, 빵 껍질, 커피, 맥주의 맛있는 냄새가 여기서 나온다. 단백질 쪽의 질소와 황이 더해져서 캐러멜화보다 향이 훨씬 다양하다.</p>
+    <p>두 반응 모두 물이 끓는 온도(100도)보다 훨씬 뜨거워야 잘 일어난다. 그래서 삶은 고기는 갈색이 되지 않고, 구운 고기만 갈색이 된다. 다만 오래 끓이거나, 알칼리성이거나, 재료가 아주 진하면 물속에서도 갈색이 된다. 오래 구운 맥반석 달걀이 그 예다.</p>
+    <p>주의할 점도 있다. 감자를 아주 뜨겁게 튀기면 몸에 좋지 않은 물질(아크릴아마이드)이 생길 수 있다.</p>
+    <div class="tip"><b>부엌에서:</b> 고기를 굽기 전에 겉의 물기를 키친타월로 닦는다. 물기가 있으면 표면이 100도에 묶여 갈색이 늦게 난다.</div>
+    <div class="src">원문: <a href="https://m.blog.naver.com/tasmanic/220388977235">갈변 반응의 두 가지</a></div>
+  </article>
+
+  </div>
+</section>
+
+<section id="reviews">
+  <h2>3. 서평이 말하는 것</h2>
+  <p class="section-note">서평 두 편의 공통 의견과 각자의 시각을 정리했다.</p>
+
+  <div class="two">
+    <div class="card">
+      <h3>이런 사람에게 맞다</h3>
+      <ul class="clean">
+        <li>레시피를 따라 하다가 "왜 이 순서지?"가 궁금해진 사람</li>
+        <li>실패한 요리의 원인을 알고 싶은 사람 (퍽퍽한 수육, 꺼진 케이크)</li>
+        <li>요리사, 파티시에, 식품 전공 학생</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>이런 사람에게는 안 맞다</h3>
+      <ul class="clean">
+        <li>오늘 저녁 메뉴를 바로 정하고 싶은 사람</li>
+        <li>사진과 단계별 레시피를 원하는 사람</li>
+        <li>처음부터 끝까지 한 번에 읽으려는 사람</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="grid" style="margin-top:16px">
+    <div class="card">
+      <h3>티스토리 「한사의 문화마을」 서평 (2025)</h3>
+      <p>이 책을 "요리책의 옷을 입은 과학서"로 본다. 레시피 → 결과 순서가 아니라 원리 → 응용 순서로 짜여 있다고 말한다. 원리를 알면 부엌에서 손이 가벼워진다고 한다.</p>
+      <p>약점도 짚는다. 분량이 너무 많아 한 장만 읽어도 배가 부르다. 일부 내용(저온 조리 안전 기준 같은 최신 연구)은 다른 자료로 보충해야 한다. 한국의 산나물 같은 재료는 다루지 않는다.</p>
+      <div class="src"><a href="https://osaekri.tistory.com/320">서평 읽기</a></div>
+    </div>
+    <div class="card">
+      <h3>네이버 블로그 「J LAB」 서평 (2020)</h3>
+      <p>제과 학교를 다닌 사람의 시각이다. 처음부터 읽으려다 포기하고, 지금은 백과사전처럼 필요한 부분만 찾아 읽는다고 한다. 자주 찾는 부분은 유제품, 달걀, 아이스크림, 초콜릿, 전분이다.</p>
+      <p>학교에서 배운 화학이 왜 필요한지 이 책을 보며 알았다고 말한다. 메일라드 반응과 글루텐이 그 예다.</p>
+      <div class="src"><a href="https://m.blog.naver.com/kenxi01/221885470315">서평 읽기</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="more">
+  <h2>4. 더 볼 자료</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>자료</th><th>내용</th></tr></thead>
+    <tbody>
+      <tr><td><a href="https://m.blog.naver.com/tasmanic/220300802665">tasmanic 연재 시작 글</a></td><td>연재를 시작한 이유와 책의 구성</td></tr>
+      <tr><td><a href="https://yujastudio.com/book-recommendations/?bmode=view&amp;idx=169448826">유자스튜디오 추천글</a></td><td>식품공학과 입시용 추천글</td></tr>
+      <tr><td><a href="https://9natree.castos.com/episodes/review-on-food-and-cooking-the-science-and-lore-of-the-kitchen-harold-mcgee-summarized">9natree 팟캐스트 (영어)</a></td><td>책 전체 요약</td></tr>
+      <tr><td><a href="https://www.bookrags.com/studyguide-on-food-and-cooking/">BookRags (영어)</a></td><td>장별 스터디 가이드, 일부 무료</td></tr>
+      <tr><td><a href="https://www.youtube.com/watch?v=GjfDW-kcX5E">CHOW 영상 (영어)</a></td><td>저자가 "굽기로 육즙을 가둔다"는 말이 틀린 이유를 설명</td></tr>
+      <tr><td><a href="https://www.youtube.com/watch?v=rNZrgK-MX_s">EBS 다큐프라임 「요리의 과학」</a></td><td>책 리뷰는 아니다. 열, 메일라드 반응, 발효 등 주제가 겹친다</td></tr>
+      <tr><td><a href="https://product.kyobobook.co.kr/detail/S000001965618">교보문고</a></td><td>책 구매 페이지</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>이 페이지는 위 블로그 연재와 서평을 읽고 쉬운 말로 다시 쓴 요약이다. 원문 문장을 옮기지 않았다. 자세한 내용과 정확한 수치는 원문과 책을 확인한다.</p>
+  <p>정리: <a href="https://teddyyeung.is-a.dev">TeddyYeung</a> · 2026-10-26</p>
+</footer>
+
+</div>
+</body>
+</html>
